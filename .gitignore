@@ -1,0 +1,60 @@
+# ─── Xcode ────────────────────────────────────────────────────────────────────
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcscmblueprint
+
+# ─── Xcode Previews ───────────────────────────────────────────────────────────
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/
+
+# ─── Swift Package Manager ────────────────────────────────────────────────────
+.build/
+.swiftpm/
+Packages/
+Package.pins
+Package.resolved
+
+# ─── CocoaPods ────────────────────────────────────────────────────────────────
+Pods/
+*.xcworkspace
+
+# ─── macOS ────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+
+# ─── Компилированные ресурсы (генерируются Xcode при сборке) ──────────────────
+*.mlmodelc/
+
+# ─── Ключи, сертификаты, секреты ─────────────────────────────────────────────
+*.p12
+*.mobileprovision
+AuthKey_*.p8
+secrets.xcconfig
+
+# ─── TestFlight / Archives ────────────────────────────────────────────────────
+*.xcarchive
+
+# ─── Результаты тестов (генерируются CI, не нужны в репо) ────────────────────
+TestResults/
+*.xcresult

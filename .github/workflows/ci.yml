@@ -1,0 +1,201 @@
+# =============================================================================
+# HeartTalk - CI
+#
+# Запускает Unit- и UI-тесты на каждом push/PR в main и develop.
+#
+# Принцип надёжности:
+#   - НЕ пиним конкретную версию Xcode. Берём ту, что выбрана на runner-е
+#     по умолчанию (GitHub держит там последний стабильный Xcode, чей SDK
+#     совместим с предустановленными симуляторами).
+#   - Симулятор выбираем динамически по UDID: берём САМУЮ свежую доступную
+#     iOS-runtime и устройство iPhone из неё. Это не ломается, когда GitHub
+#     обновляет образ runner-а (имена/версии iOS меняются со временем).
+# =============================================================================
+
+name: CI/CD
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+env:
+  SCHEME: "HeartTalk"
+
+# Новый push в ту же ветку отменяет предыдущий запуск.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ----------------------------- UNIT TESTS ----------------------------------
+  unit-tests:
+    name: Unit Tests
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show environment
+        run: |
+          xcodebuild -version
+          echo "Доступные симуляторы:"
+          xcrun simctl list devices available
+
+      - name: Pick & boot simulator
+        id: sim
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          best = None
+          # Идём по runtime-ам в порядке возрастания версии,
+          # сохраняем последний (= самый новый) подходящий iPhone.
+          for runtime in sorted(data['devices'].keys()):
+              for d in data['devices'][runtime]:
+                  if d['name'].startswith('iPhone') and d['isAvailable']:
+                      best = (d['udid'], d['name'], runtime)
+          if not best:
+              sys.exit('Нет доступных iPhone-симуляторов')
+          print(best[0])
+          sys.stderr.write(f'Выбран: {best[1]} | {best[2]}\n')
+          ")
+          echo "Simulator UDID: $UDID"
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+          xcrun simctl boot "$UDID" || true   # 'already booted' - не ошибка
+          xcrun simctl bootstatus "$UDID" -b
+
+      - name: Cache DerivedData
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData
+          key: derived-unit-${{ hashFiles('**/*.swift', 'project.yml') }}
+          restore-keys: derived-unit-
+
+      - name: Run Unit Tests
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project HeartTalk.xcodeproj \
+            -scheme "$SCHEME" \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -only-testing:HeartTalkTests \
+            -configuration Debug \
+            -resultBundlePath TestResults/UnitTests.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            | xcpretty --color --report junit --output TestResults/unit-junit.xml \
+            || (echo "::error::Unit-тесты упали"; exit 1)
+
+      - name: Upload unit test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-results
+          path: TestResults/
+          retention-days: 14
+
+  # ------------------------------ UI TESTS -----------------------------------
+  ui-tests:
+    name: UI Tests
+    runs-on: macos-15
+    # Параллельно с unit. Чтобы запускать после unit - раскомментируй:
+    # needs: unit-tests
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pick & boot simulator
+        id: sim
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          best = None
+          for runtime in sorted(data['devices'].keys()):
+              for d in data['devices'][runtime]:
+                  if d['name'].startswith('iPhone') and d['isAvailable']:
+                      best = (d['udid'], d['name'], runtime)
+          if not best:
+              sys.exit('Нет доступных iPhone-симуляторов')
+          print(best[0])
+          sys.stderr.write(f'Выбран: {best[1]} | {best[2]}\n')
+          ")
+          echo "Simulator UDID: $UDID"
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+          xcrun simctl boot "$UDID" || true
+          xcrun simctl bootstatus "$UDID" -b
+
+      - name: Cache DerivedData
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData
+          key: derived-ui-${{ hashFiles('**/*.swift', 'project.yml') }}
+          restore-keys: derived-ui-
+
+      - name: Run UI Tests
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project HeartTalk.xcodeproj \
+            -scheme "$SCHEME" \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -only-testing:HeartTalkUITests \
+            -configuration Debug \
+            -resultBundlePath TestResults/UITests.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            | xcpretty --color --report junit --output TestResults/ui-junit.xml \
+            || (echo "::error::UI-тесты упали"; exit 1)
+
+      - name: Upload UI test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-test-results
+          path: TestResults/
+          retention-days: 14
+
+  # --------------------------- BUILD RELEASE ---------------------------------
+  build-release:
+    name: Build Release Archive
+    runs-on: macos-15
+    # Запускается только если оба теста прошли успешно.
+    needs: [unit-tests, ui-tests]
+    # Только при пуше в main — на PR не собираем архив.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache DerivedData
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData
+          key: derived-release-${{ hashFiles('**/*.swift', 'project.yml') }}
+          restore-keys: derived-release-
+
+      - name: Build Release Archive
+        run: |
+          set -o pipefail
+          xcodebuild archive \
+            -project HeartTalk.xcodeproj \
+            -scheme "$SCHEME" \
+            -configuration Release \
+            -destination "generic/platform=iOS Simulator" \
+            -archivePath Archive/HeartTalk.xcarchive \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            SKIP_INSTALL=NO \
+            | xcpretty --color \
+            || (echo "::error::Release-сборка упала"; exit 1)
+
+      - name: Upload archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: HeartTalk-xcarchive
+          path: Archive/HeartTalk.xcarchive
+          retention-days: 30

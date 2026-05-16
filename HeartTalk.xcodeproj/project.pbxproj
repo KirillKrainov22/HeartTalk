@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		060D07EA40D47D43854254EA /* QuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA175E0C558D477D954E5A5 /* QuestionDetailViewController.swift */; };
+		117EC3D8D58B88E6D92998E3 /* NamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A11C585A0857A383BD480C /* NamesViewController.swift */; };
+		1CA47AA9994063E8133ED009 /* NLP.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B242CB0FC21B9C14B63475C8 /* NLP.mlmodel */; };
+		1ED190048CF559088596258A /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177692A6B6C1F460D117F3C /* FavoritesViewModel.swift */; };
+		2772AFFD55BAD11E06FC75F7 /* GlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2ADE940A5B6D73D3C62B1 /* GlassView.swift */; };
+		2C402214B06E9BD718D408EE /* NLPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168DC772B9CBC97D26FE0921 /* NLPService.swift */; };
+		38F691103F7A1080AC423A8E /* QuestionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40A3763C1B5519F007BB63 /* QuestionDetailViewModel.swift */; };
+		3DC59CE43FC543D7720A50FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EAB4887E3CFC0A13393F5E /* Assets.xcassets */; };
+		3F1539B1D5582146A9052E65 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869B9A3CAF21AED986E105BF /* SettingsViewController.swift */; };
+		43A8294ED7ADFCBEA94B7FA3 /* QuestionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921AB16AD8607FBEBFD426D /* QuestionRepositoryTests.swift */; };
+		A11A11A11A11A11A11A11A11 /* StatsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11B11B11B11B11B11B11B11 /* StatsViewModelTests.swift */; };
+		A22A22A22A22A22A22A22A22 /* QuestionDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B22B22B22B22B22B22B22 /* QuestionDetailViewModelTests.swift */; };
+		A33A33A33A33A33A33A33A33 /* UserSettingsStreakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B33B33B33B33B33B33B33 /* UserSettingsStreakTests.swift */; };
+		444C3CD2A934BB5AEC4D7C26 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE6D434CAEAD9C3B3B0CE7 /* ToastView.swift */; };
+		47EB87BDD7D3B22DF4AD8D2A /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1FE41B3E22AC1163D870AF /* UIColor+Theme.swift */; };
+		4D3436805FF6E35224980553 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA77536469623556385D25C /* QuestionsViewController.swift */; };
+		4DE3F91A90B257C85930E34E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D2F83B39C6BB2BA06CCE5 /* SplashViewController.swift */; };
+		57DC7E92CE9E1B6033634CE9 /* AppBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017AADC88B5A5E2E31AD102B /* AppBackgroundViewController.swift */; };
+		5D213B0AF7334B747C842E1F /* HeartTalk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EB836F12FC65B0EBA2AC049 /* HeartTalk.xcdatamodeld */; };
+		5E78104EF09AE77B9CC22B08 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8E2906440F6E47EA27C81 /* UserSettings.swift */; };
+		664DAC1152E7C1BAA25557C4 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4A01195679E337AC6FBFF /* AppDependencies.swift */; };
+		672D1A99A83FA1E62445824F /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E8BFECA69DB2453EDDACC /* ViewModelTests.swift */; };
+		694A97BF261992A35A87EA99 /* QuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67ECF7D273E3DAD04D7E57 /* QuestionRepository.swift */; };
+		788E8ACAE5A073572762A17B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4754238A1FCB1FBF78D6797C /* CoreDataStack.swift */; };
+		79059830906BAEB24FAEF5B4 /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A957899E8CEBB70651ED93E9 /* StatsViewModel.swift */; };
+		7E8383323B01FC989D693BC9 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39227C56A2B2EECE6FF23A8 /* NotificationService.swift */; };
+		93C591296FF9C87BCE98EB46 /* GlassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF94852781FD27202F241E /* GlassTextField.swift */; };
+		A75B13BE487AC26E6BC975C0 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AE4B47B276A8A1D8F807942 /* questions.json */; };
+		A825D38C1191FA26946AAF90 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32987FAF5B71E026CC4C25F7 /* FavoritesViewController.swift */; };
+		AA0489A2BDFB9A4060AF4FCB /* HeartTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8AD7CB97F858A7957D1537 /* HeartTalkUITests.swift */; };
+		AC31565E293F5410DB8AE7D2 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576D8DB171FB509E22CABD4 /* SuccessViewController.swift */; };
+		AC68256FBDEE692AAE9732E4 /* QuestionLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782E3B61A3ACB2A0DB8183E /* QuestionLoaderTests.swift */; };
+		B66F6D98710E91D73285FF50 /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AB91D5C219B6EDFC7CB25 /* QuestionsViewModel.swift */; };
+		B7567A8FC64F86C9E0D6145C /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307DB5AB4E0ADB65E1E41B83 /* PrimaryButton.swift */; };
+		B952CE46C8D6DD56264D5FEE /* UIFont+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA233B5BF68EBAE826BD484B /* UIFont+App.swift */; };
+		CC252E49890E87285E4A4A8C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FCDCCDB89E11DD185E70A /* MainTabBarController.swift */; };
+		DFEE139BE1BA3FBCADA49740 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840D2CE3E4C56E393035ED8 /* Question.swift */; };
+		E0D1020350199E5FCB04707B /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42B8303C9DEE9E2B68DC85 /* OnboardingViewModel.swift */; };
+		EB3F1C2FAA2DFF6C1D136A5D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45005DA24A706633DF65FB3 /* SettingsViewModel.swift */; };
+		EDE5085DD0D04613BD49908A /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C550BA9784E47B197065330 /* StatsViewController.swift */; };
+		EE893564B3425C9BDA60FE24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E6EC37A745CCD5857E79E /* AppDelegate.swift */; };
+		F5C6C1B59F10FAE7691A5538 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC94C9FDE89AA08859D516B /* SceneDelegate.swift */; };
+		FCCBD8927B37C4FC0F229845 /* QuestionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97723F4884CC7CE4763BBCDE /* QuestionLoader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		087B0A589B75F0CA22B58656 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 937411677AD73CD666C330AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69592BAD61743058779FB8F3;
+			remoteInfo = HeartTalk;
+		};
+		734663EE7630E29E36AADEDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 937411677AD73CD666C330AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69592BAD61743058779FB8F3;
+			remoteInfo = HeartTalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A11C585A0857A383BD480C /* NamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesViewController.swift; sourceTree = "<group>"; };
+		017AADC88B5A5E2E31AD102B /* AppBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackgroundViewController.swift; sourceTree = "<group>"; };
+		1177692A6B6C1F460D117F3C /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		168DC772B9CBC97D26FE0921 /* NLPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPService.swift; sourceTree = "<group>"; };
+		1F8AD7CB97F858A7957D1537 /* HeartTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTalkUITests.swift; sourceTree = "<group>"; };
+		307DB5AB4E0ADB65E1E41B83 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		32987FAF5B71E026CC4C25F7 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		35D8E2906440F6E47EA27C81 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		3840D2CE3E4C56E393035ED8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		39B9CE0E004233EAF56D4D7A /* HeartTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B67ECF7D273E3DAD04D7E57 /* QuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepository.swift; sourceTree = "<group>"; };
+		410FCDCCDB89E11DD185E70A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4754238A1FCB1FBF78D6797C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		4C7D2F83B39C6BB2BA06CCE5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		52EAB4887E3CFC0A13393F5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59BA2C7A7E3A7F21FB3B8F8B /* HeartTalkUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HeartTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FE2ADE940A5B6D73D3C62B1 /* GlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassView.swift; sourceTree = "<group>"; };
+		6C39FC8F359294E6E5A99396 /* HeartTalkTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HeartTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C550BA9784E47B197065330 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		70BE6D434CAEAD9C3B3B0CE7 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		7CA77536469623556385D25C /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		843AB91D5C219B6EDFC7CB25 /* QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewModel.swift; sourceTree = "<group>"; };
+		869B9A3CAF21AED986E105BF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8AE4B47B276A8A1D8F807942 /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		8BD8AFC84FC2367915C45229 /* HeartTalk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeartTalk.xcdatamodel; sourceTree = "<group>"; };
+		97723F4884CC7CE4763BBCDE /* QuestionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLoader.swift; sourceTree = "<group>"; };
+		9A5CFA9AAF3092638CFC05F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A921AB16AD8607FBEBFD426D /* QuestionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepositoryTests.swift; sourceTree = "<group>"; };
+		B11B11B11B11B11B11B11B11 /* StatsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModelTests.swift; sourceTree = "<group>"; };
+		B22B22B22B22B22B22B22B22 /* QuestionDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewModelTests.swift; sourceTree = "<group>"; };
+		B33B33B33B33B33B33B33B33 /* UserSettingsStreakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsStreakTests.swift; sourceTree = "<group>"; };
+		A957899E8CEBB70651ED93E9 /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
+		ACC94C9FDE89AA08859D516B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AE6E6EC37A745CCD5857E79E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B242CB0FC21B9C14B63475C8 /* NLP.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = NLP.mlmodel; sourceTree = "<group>"; };
+		B39227C56A2B2EECE6FF23A8 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		BFD4A01195679E337AC6FBFF /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		C45005DA24A706633DF65FB3 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		C6DF94852781FD27202F241E /* GlassTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassTextField.swift; sourceTree = "<group>"; };
+		CB42B8303C9DEE9E2B68DC85 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		CF40A3763C1B5519F007BB63 /* QuestionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewModel.swift; sourceTree = "<group>"; };
+		D576D8DB171FB509E22CABD4 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		D782E3B61A3ACB2A0DB8183E /* QuestionLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLoaderTests.swift; sourceTree = "<group>"; };
+		DA233B5BF68EBAE826BD484B /* UIFont+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+App.swift"; sourceTree = "<group>"; };
+		EA1FE41B3E22AC1163D870AF /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		FBA175E0C558D477D954E5A5 /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
+		FC4E8BFECA69DB2453EDDACC /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0FCBAB9C705DC82F242A4A58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B65B24630E16EB76F230E391 /* Components */,
+				45CB1F2498D8958936341745 /* Main */,
+				F95052E34964FC98703935A7 /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		19B7BAAB476F832A49FDB1D9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				168DC772B9CBC97D26FE0921 /* NLPService.swift */,
+				B39227C56A2B2EECE6FF23A8 /* NotificationService.swift */,
+				97723F4884CC7CE4763BBCDE /* QuestionLoader.swift */,
+				3B67ECF7D273E3DAD04D7E57 /* QuestionRepository.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2BC44AF59FC328CBF432C011 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39B9CE0E004233EAF56D4D7A /* HeartTalk.app */,
+				6C39FC8F359294E6E5A99396 /* HeartTalkTests.xctest */,
+				59BA2C7A7E3A7F21FB3B8F8B /* HeartTalkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		408000D1468664B025965F3A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4754238A1FCB1FBF78D6797C /* CoreDataStack.swift */,
+				2EB836F12FC65B0EBA2AC049 /* HeartTalk.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		45CB1F2498D8958936341745 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				017AADC88B5A5E2E31AD102B /* AppBackgroundViewController.swift */,
+				32987FAF5B71E026CC4C25F7 /* FavoritesViewController.swift */,
+				410FCDCCDB89E11DD185E70A /* MainTabBarController.swift */,
+				FBA175E0C558D477D954E5A5 /* QuestionDetailViewController.swift */,
+				7CA77536469623556385D25C /* QuestionsViewController.swift */,
+				869B9A3CAF21AED986E105BF /* SettingsViewController.swift */,
+				6C550BA9784E47B197065330 /* StatsViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		77F712E1FD1F67C32D06A2BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA1FE41B3E22AC1163D870AF /* UIColor+Theme.swift */,
+				DA233B5BF68EBAE826BD484B /* UIFont+App.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		860A1697A0156CE62A2B18FB /* HeartTalk */ = {
+			isa = PBXGroup;
+			children = (
+				86A6A152860715E38DD783D1 /* App */,
+				77F712E1FD1F67C32D06A2BB /* Extensions */,
+				8C4CA3635ECF35CCA2BDE1BF /* Models */,
+				BCB636B00012AD271A76849A /* Resources */,
+				19B7BAAB476F832A49FDB1D9 /* Services */,
+				C5D0FFB4A2CEE2484EA74D4F /* ViewModels */,
+				0FCBAB9C705DC82F242A4A58 /* Views */,
+			);
+			path = HeartTalk;
+			sourceTree = "<group>";
+		};
+		86A6A152860715E38DD783D1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AE6E6EC37A745CCD5857E79E /* AppDelegate.swift */,
+				9A5CFA9AAF3092638CFC05F2 /* Info.plist */,
+				ACC94C9FDE89AA08859D516B /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8762BE674620ADA28332DA36 /* HeartTalkTests */ = {
+			isa = PBXGroup;
+			children = (
+				D782E3B61A3ACB2A0DB8183E /* QuestionLoaderTests.swift */,
+				A921AB16AD8607FBEBFD426D /* QuestionRepositoryTests.swift */,
+				FC4E8BFECA69DB2453EDDACC /* ViewModelTests.swift */,
+				B11B11B11B11B11B11B11B11 /* StatsViewModelTests.swift */,
+				B22B22B22B22B22B22B22B22 /* QuestionDetailViewModelTests.swift */,
+				B33B33B33B33B33B33B33B33 /* UserSettingsStreakTests.swift */,
+			);
+			path = HeartTalkTests;
+			sourceTree = "<group>";
+		};
+		8BA06C8D4F96A54EC1CC5B71 /* HeartTalkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1F8AD7CB97F858A7957D1537 /* HeartTalkUITests.swift */,
+			);
+			path = HeartTalkUITests;
+			sourceTree = "<group>";
+		};
+		8C4CA3635ECF35CCA2BDE1BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3840D2CE3E4C56E393035ED8 /* Question.swift */,
+				35D8E2906440F6E47EA27C81 /* UserSettings.swift */,
+				408000D1468664B025965F3A /* CoreData */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E578708AF07019A15078D9D = {
+			isa = PBXGroup;
+			children = (
+				860A1697A0156CE62A2B18FB /* HeartTalk */,
+				8762BE674620ADA28332DA36 /* HeartTalkTests */,
+				8BA06C8D4F96A54EC1CC5B71 /* HeartTalkUITests */,
+				2BC44AF59FC328CBF432C011 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B65B24630E16EB76F230E391 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C6DF94852781FD27202F241E /* GlassTextField.swift */,
+				5FE2ADE940A5B6D73D3C62B1 /* GlassView.swift */,
+				307DB5AB4E0ADB65E1E41B83 /* PrimaryButton.swift */,
+				70BE6D434CAEAD9C3B3B0CE7 /* ToastView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BCB636B00012AD271A76849A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52EAB4887E3CFC0A13393F5E /* Assets.xcassets */,
+				B242CB0FC21B9C14B63475C8 /* NLP.mlmodel */,
+				8AE4B47B276A8A1D8F807942 /* questions.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5D0FFB4A2CEE2484EA74D4F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BFD4A01195679E337AC6FBFF /* AppDependencies.swift */,
+				1177692A6B6C1F460D117F3C /* FavoritesViewModel.swift */,
+				CB42B8303C9DEE9E2B68DC85 /* OnboardingViewModel.swift */,
+				CF40A3763C1B5519F007BB63 /* QuestionDetailViewModel.swift */,
+				843AB91D5C219B6EDFC7CB25 /* QuestionsViewModel.swift */,
+				C45005DA24A706633DF65FB3 /* SettingsViewModel.swift */,
+				A957899E8CEBB70651ED93E9 /* StatsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F95052E34964FC98703935A7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				00A11C585A0857A383BD480C /* NamesViewController.swift */,
+				4C7D2F83B39C6BB2BA06CCE5 /* SplashViewController.swift */,
+				D576D8DB171FB509E22CABD4 /* SuccessViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69592BAD61743058779FB8F3 /* HeartTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41BD9AF58BFD4008861B9857 /* Build configuration list for PBXNativeTarget "HeartTalk" */;
+			buildPhases = (
+				2534F1C4EA422BA4B44F764C /* Sources */,
+				71DD6488E544CBEBE8D1403D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeartTalk;
+			packageProductDependencies = (
+			);
+			productName = HeartTalk;
+			productReference = 39B9CE0E004233EAF56D4D7A /* HeartTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A3E3D13CDAC3821719558D5 /* HeartTalkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5917BF8FAFC0D4DD0059B1A /* Build configuration list for PBXNativeTarget "HeartTalkUITests" */;
+			buildPhases = (
+				57D2FB3368A35AA3804F69F1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C261781BB1CE016A3B593C5B /* PBXTargetDependency */,
+			);
+			name = HeartTalkUITests;
+			packageProductDependencies = (
+			);
+			productName = HeartTalkUITests;
+			productReference = 59BA2C7A7E3A7F21FB3B8F8B /* HeartTalkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F90BBEA23FC4827408042A16 /* HeartTalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79641AB23CCBCE274B9291ED /* Build configuration list for PBXNativeTarget "HeartTalkTests" */;
+			buildPhases = (
+				243C33C7A40D7E3FBD370E84 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFB099B8DA432E941E9897E0 /* PBXTargetDependency */,
+			);
+			name = HeartTalkTests;
+			packageProductDependencies = (
+			);
+			productName = HeartTalkTests;
+			productReference = 6C39FC8F359294E6E5A99396 /* HeartTalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		937411677AD73CD666C330AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					69592BAD61743058779FB8F3 = {
+						ProvisioningStyle = Automatic;
+					};
+					9A3E3D13CDAC3821719558D5 = {
+						DevelopmentTeam = "";
+						TestTargetID = 69592BAD61743058779FB8F3;
+					};
+					F90BBEA23FC4827408042A16 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 393A22D2072A83879444EFC9 /* Build configuration list for PBXProject "HeartTalk" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 8E578708AF07019A15078D9D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2BC44AF59FC328CBF432C011 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69592BAD61743058779FB8F3 /* HeartTalk */,
+				F90BBEA23FC4827408042A16 /* HeartTalkTests */,
+				9A3E3D13CDAC3821719558D5 /* HeartTalkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71DD6488E544CBEBE8D1403D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DC59CE43FC543D7720A50FB /* Assets.xcassets in Resources */,
+				A75B13BE487AC26E6BC975C0 /* questions.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		243C33C7A40D7E3FBD370E84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC68256FBDEE692AAE9732E4 /* QuestionLoaderTests.swift in Sources */,
+				43A8294ED7ADFCBEA94B7FA3 /* QuestionRepositoryTests.swift in Sources */,
+				672D1A99A83FA1E62445824F /* ViewModelTests.swift in Sources */,
+				A11A11A11A11A11A11A11A11 /* StatsViewModelTests.swift in Sources */,
+				A22A22A22A22A22A22A22A22 /* QuestionDetailViewModelTests.swift in Sources */,
+				A33A33A33A33A33A33A33A33 /* UserSettingsStreakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2534F1C4EA422BA4B44F764C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DC7E92CE9E1B6033634CE9 /* AppBackgroundViewController.swift in Sources */,
+				EE893564B3425C9BDA60FE24 /* AppDelegate.swift in Sources */,
+				664DAC1152E7C1BAA25557C4 /* AppDependencies.swift in Sources */,
+				788E8ACAE5A073572762A17B /* CoreDataStack.swift in Sources */,
+				A825D38C1191FA26946AAF90 /* FavoritesViewController.swift in Sources */,
+				1ED190048CF559088596258A /* FavoritesViewModel.swift in Sources */,
+				93C591296FF9C87BCE98EB46 /* GlassTextField.swift in Sources */,
+				2772AFFD55BAD11E06FC75F7 /* GlassView.swift in Sources */,
+				5D213B0AF7334B747C842E1F /* HeartTalk.xcdatamodeld in Sources */,
+				CC252E49890E87285E4A4A8C /* MainTabBarController.swift in Sources */,
+				1CA47AA9994063E8133ED009 /* NLP.mlmodel in Sources */,
+				2C402214B06E9BD718D408EE /* NLPService.swift in Sources */,
+				117EC3D8D58B88E6D92998E3 /* NamesViewController.swift in Sources */,
+				7E8383323B01FC989D693BC9 /* NotificationService.swift in Sources */,
+				E0D1020350199E5FCB04707B /* OnboardingViewModel.swift in Sources */,
+				B7567A8FC64F86C9E0D6145C /* PrimaryButton.swift in Sources */,
+				DFEE139BE1BA3FBCADA49740 /* Question.swift in Sources */,
+				060D07EA40D47D43854254EA /* QuestionDetailViewController.swift in Sources */,
+				38F691103F7A1080AC423A8E /* QuestionDetailViewModel.swift in Sources */,
+				FCCBD8927B37C4FC0F229845 /* QuestionLoader.swift in Sources */,
+				694A97BF261992A35A87EA99 /* QuestionRepository.swift in Sources */,
+				4D3436805FF6E35224980553 /* QuestionsViewController.swift in Sources */,
+				B66F6D98710E91D73285FF50 /* QuestionsViewModel.swift in Sources */,
+				F5C6C1B59F10FAE7691A5538 /* SceneDelegate.swift in Sources */,
+				3F1539B1D5582146A9052E65 /* SettingsViewController.swift in Sources */,
+				EB3F1C2FAA2DFF6C1D136A5D /* SettingsViewModel.swift in Sources */,
+				4DE3F91A90B257C85930E34E /* SplashViewController.swift in Sources */,
+				EDE5085DD0D04613BD49908A /* StatsViewController.swift in Sources */,
+				79059830906BAEB24FAEF5B4 /* StatsViewModel.swift in Sources */,
+				AC31565E293F5410DB8AE7D2 /* SuccessViewController.swift in Sources */,
+				444C3CD2A934BB5AEC4D7C26 /* ToastView.swift in Sources */,
+				47EB87BDD7D3B22DF4AD8D2A /* UIColor+Theme.swift in Sources */,
+				B952CE46C8D6DD56264D5FEE /* UIFont+App.swift in Sources */,
+				5E78104EF09AE77B9CC22B08 /* UserSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57D2FB3368A35AA3804F69F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0489A2BDFB9A4060AF4FCB /* HeartTalkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C261781BB1CE016A3B593C5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69592BAD61743058779FB8F3 /* HeartTalk */;
+			targetProxy = 734663EE7630E29E36AADEDB /* PBXContainerItemProxy */;
+		};
+		CFB099B8DA432E941E9897E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69592BAD61743058779FB8F3 /* HeartTalk */;
+			targetProxy = 087B0A589B75F0CA22B58656 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A418B507C1FD321E60E248D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirillkraynov.HeartTalkTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeartTalk.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HeartTalk";
+			};
+			name = Debug;
+		};
+		0B0FC395C403D12C9E872D49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirillkraynov.HeartTalkUITests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeartTalk;
+			};
+			name = Debug;
+		};
+		1AE88EE840EF792F922E70F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		542270F08728E0ABEEA7B497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COREML_CODEGEN_LANGUAGE = Swift;
+				DEVELOPMENT_TEAM = 28VY7UPP54;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = HeartTalk/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirillkraynov.HeartTalk;
+				PRODUCT_NAME = HeartTalk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5857088B32CFA15782740D67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirillkraynov.HeartTalkTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeartTalk.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HeartTalk";
+			};
+			name = Release;
+		};
+		6F2253F5CCEF982E3BC78701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirillkraynov.HeartTalkUITests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeartTalk;
+			};
+			name = Release;
+		};
+		A2D67097E2F9D5202EDE085F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CDEF7C6B9DAD56E4CF955413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COREML_CODEGEN_LANGUAGE = Swift;
+				DEVELOPMENT_TEAM = 28VY7UPP54;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = HeartTalk/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirillkraynov.HeartTalk;
+				PRODUCT_NAME = HeartTalk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		393A22D2072A83879444EFC9 /* Build configuration list for PBXProject "HeartTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AE88EE840EF792F922E70F5 /* Debug */,
+				A2D67097E2F9D5202EDE085F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41BD9AF58BFD4008861B9857 /* Build configuration list for PBXNativeTarget "HeartTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDEF7C6B9DAD56E4CF955413 /* Debug */,
+				542270F08728E0ABEEA7B497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79641AB23CCBCE274B9291ED /* Build configuration list for PBXNativeTarget "HeartTalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A418B507C1FD321E60E248D /* Debug */,
+				5857088B32CFA15782740D67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5917BF8FAFC0D4DD0059B1A /* Build configuration list for PBXNativeTarget "HeartTalkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B0FC395C403D12C9E872D49 /* Debug */,
+				6F2253F5CCEF982E3BC78701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2EB836F12FC65B0EBA2AC049 /* HeartTalk.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8BD8AFC84FC2367915C45229 /* HeartTalk.xcdatamodel */,
+			);
+			currentVersion = 8BD8AFC84FC2367915C45229 /* HeartTalk.xcdatamodel */;
+			path = HeartTalk.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 937411677AD73CD666C330AD /* Project object */;
+}
