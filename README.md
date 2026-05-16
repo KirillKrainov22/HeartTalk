@@ -1,13 +1,4 @@
-# HeartTalk 💬
-
-> iOS-приложение для пар — структурированные карточки с вопросами для глубокого общения и анализом тональности заметок.
-
-![Swift](https://img.shields.io/badge/Swift-5.9-FA7343?logo=swift&logoColor=white)
-![Platform](https://img.shields.io/badge/Platform-iOS%2016%2B-blue?logo=apple)
-![Architecture](https://img.shields.io/badge/Architecture-MVVM-8957E5)
-![CI/CD](https://github.com/KirillKrainov22/HeartTalk/actions/workflows/ci.yml/badge.svg)
-
----
+# HeartTalk
 
 ## О приложении
 
@@ -127,6 +118,13 @@ push / PR
 
 ---
 
+## Связанные репозитории
+
+- [Анализ уведомлений](https://github.com/KirillKrainov22/notification_for_coursework) — исследование эффективности push-уведомлений
+- [ML-модель (анализ тональности)](https://github.com/KirillKrainov22/ios-sentiment-analysis) — подробная информация об обучении и архитектуре NLP.mlmodel
+
+---
+
 ## Запуск проекта
 
 **Требования:**
@@ -160,3 +158,4 @@ xcodebuild test -project HeartTalk.xcodeproj -scheme HeartTalk \
 
 **Кирилл Крайнов** — iOS-разработчик  
 [github.com/KirillKrainov22](https://github.com/KirillKrainov22)
+
